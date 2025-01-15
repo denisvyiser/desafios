@@ -8,14 +8,14 @@ namespace TesteConsole
     {
         static void Main(string[] args)
         {
-            List<Fila> fila = new List<Fila>();
-            fila.Add(new Fila(11, false));
-            fila.Add(new Fila(7, true));
-            fila.Add(new Fila(8, false));
-            fila.Add(new Fila(5, false));
-            fila.Add(new Fila(3, false));
-            fila.Add(new Fila(4, false));
-            fila.Add(new Fila(10,true));
+            List<Fila> fila = new List<Fila>() {
+                new Fila(11, false),
+                new Fila(7, true),
+                new Fila(8, false),
+                new Fila(5, false),
+                new Fila(3, false),
+                new Fila(4, false),
+                new Fila(10,true)};
 
             Console.WriteLine("List before Sort: [{0} ", String.Join("];", fila.Select(c=> $"Position: {c.Position}, Preferencial: {c.IsPrefencial}")));
             Sort(fila);
